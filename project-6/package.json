@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "lite-server": "2.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0"
   }
 }
