@@ -152,14 +152,6 @@ contract SupplyChain {
     }
   }
 
-
-    string  productNotes; // Product Notes
-    uint    productPrice; // Product Price
-    State   itemState;  // Product State as represented in the enum above
-    address distributorID;  // Metamask-Ethereum address of the Distributor
-    address retailerID; // Metamask-Ethereum address of the Retailer
-    address consumerID; // Metamask-Ethereum address of the Consumer
-
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
   function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public
   {
@@ -175,15 +167,17 @@ contract SupplyChain {
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
   function processItem(uint _upc) public 
-  // Call modifier to check if upc has passed previous supply chain stage
-  
-  // Call modifier to verify caller of this function
-  
-  {
+    // Call modifier to check if upc has passed previous supply chain stage
+    harvested(_upc);
+
+    // Call modifier to verify caller of this function
+    verifyCaller(items[_upc].originFarmerID);
+
     // Update the appropriate fields
+    items[_upc].itemState = State.Processed;
     
     // Emit the appropriate event
-    
+    emit Processed(_upc);
   }
 
   // Define a function 'packItem' that allows a farmer to mark an item 'Packed'
