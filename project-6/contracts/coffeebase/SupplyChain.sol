@@ -152,15 +152,25 @@ contract SupplyChain {
     }
   }
 
+
+    string  productNotes; // Product Notes
+    uint    productPrice; // Product Price
+    State   itemState;  // Product State as represented in the enum above
+    address distributorID;  // Metamask-Ethereum address of the Distributor
+    address retailerID; // Metamask-Ethereum address of the Retailer
+    address consumerID; // Metamask-Ethereum address of the Consumer
+
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
-  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string  _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public 
+  function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public
   {
     // Add the new item as part of Harvest
-    
+    items[_upc] = Item({ sku: sku, upc: _upc, ownerId: _originFarmerID, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productID: _upc + sku, productNotes: _productNotes, productPrice: 0, itemState: State.Harvested, distributorID: 0, consumerID: 0 });
+
     // Increment sku
     sku = sku + 1;
+
     // Emit the appropriate event
-    
+    emit Harvested(_upc);
   }
 
   // Define a function 'processtItem' that allows a farmer to mark an item 'Processed'
