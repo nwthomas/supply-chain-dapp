@@ -4,11 +4,16 @@ pragma solidity ^0.4.24;
 import "./Roles.sol";
 
 // Define a contract 'ConsumerRole' to manage this role - add, remove, check
-contract ConsumerRole {
+contract ConsumerRole is Roles {
 
   // Define 2 events, one for Adding, and other for Removing
+  event addConsumer(address _newConsumer);
+  event removeConsumer(address _removedConsumer);
 
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
+  struct Consumers {
+    mapping ()
+  }
 
   // In the constructor make the address that deploys this contract the 1st consumer
   constructor() public {
