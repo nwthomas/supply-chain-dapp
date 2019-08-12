@@ -14,13 +14,13 @@ contract SupplyChain {
   // Define a public mapping 'items' that maps the UPC to an Item.
   mapping (uint => Item) items;
 
-  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash, 
+  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash,
   // that track its journey through the supply chain -- to be sent from DApp.
   mapping (uint => string[]) itemsHistory;
-  
+
   // Define enum 'State' with the following values:
-  enum State 
-  { 
+  enum State
+  {
     Harvested,  // 0
     Processed,  // 1
     Packed,     // 2
@@ -64,22 +64,22 @@ contract SupplyChain {
 
   // Define a modifer that checks to see if msg.sender == owner of the contract
   modifier onlyOwner() {
-    require(msg.sender == owner);
+    require(msg.sender == owner, "You must be the owner of the contract");
     _;
   }
 
   // Define a modifer that verifies the Caller
   modifier verifyCaller (address _address) {
-    require(msg.sender == _address); 
+    require(msg.sender == _address, "The address must be the message sender");
     _;
   }
 
   // Define a modifier that checks if the paid amount is sufficient to cover the price
-  modifier paidEnough(uint _price) { 
-    require(msg.value >= _price); 
+  modifier paidEnough(uint _price) {
+    require(msg.value >= _price, "The amount to be paid must cover the price");
     _;
   }
-  
+
   // Define a modifier that checks the price and refunds the remaining balance
   modifier checkValue(uint _upc) {
     _;
@@ -90,49 +90,49 @@ contract SupplyChain {
 
   // Define a modifier that checks if an item.state of a upc is Harvested
   modifier harvested(uint _upc) {
-    require(items[_upc].itemState == State.Harvested);
+    require(items[_upc].itemState == State.Harvested, "The state must be 'Harvested'");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Processed
   modifier processed(uint _upc) {
-
+    require(items[_upc].itemState == State.Processed, "The state must be 'Processed'");
     _;
   }
-  
+
   // Define a modifier that checks if an item.state of a upc is Packed
   modifier packed(uint _upc) {
-
+    require(items[_upc].itemState == State.Packed, "The state must be 'Packed'");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is ForSale
   modifier forSale(uint _upc) {
-
+    require(items[_upc].itemState == State.ForSale, "The state must be 'ForSale'");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Sold
   modifier sold(uint _upc) {
-
+    require(items[_upc].itemState == State.Sold, "The state must be 'Sold'");
     _;
   }
-  
+
   // Define a modifier that checks if an item.state of a upc is Shipped
   modifier shipped(uint _upc) {
-
+    require(items[_upc].itemState == State.Shipped, "The state must be 'Shipped'");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Received
   modifier received(uint _upc) {
-
+    require(items[_upc].itemState == State.Received, "The state must be 'Received'");
     _;
   }
 
   // Define a modifier that checks if an item.state of a upc is Purchased
   modifier purchased(uint _upc) {
-    
+    require(items[_upc].itemState == State.Purchased, "The state must be 'Purchased'");
     _;
   }
 
