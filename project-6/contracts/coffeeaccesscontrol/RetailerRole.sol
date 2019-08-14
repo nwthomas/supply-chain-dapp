@@ -1,4 +1,4 @@
-pragma solidity ^0.5.8;
+pragma solidity ^0.4.24;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -8,7 +8,7 @@ contract RetailerRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
-  event addRetailer(address _addedRetailer);
+  event newRetailer(address _newRetailer);
   event removeRetailer(address _removedRetailer);
 
   // Define a struct 'retailers' by inheriting from 'Roles' library, struct Role
@@ -43,7 +43,7 @@ contract RetailerRole {
   // Define an internal function '_addRetailer' to add this role, called by 'addRetailer'
   function _addRetailer(address _account) internal {
     retailers.add(_account);
-    emit addRetailer(_account);
+    emit newRetailer(_account);
   }
 
   // Define an internal function '_removeRetailer' to remove this role, called by 'removeRetailer'
