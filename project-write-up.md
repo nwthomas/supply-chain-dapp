@@ -4,7 +4,6 @@
 
 - [Unified Modeling Language](#unified-modeling-language)
 - [Libraries](#libraries)
-- [IPFS](#ipfs)
 
 ## UNIFIED MODELING LANGUAGE
 
@@ -18,4 +17,7 @@ The following images represent a brief overview of the processes, modeling, and 
 
 ## LIBRARIES
 
-## IPFS
+In this project, I'll be using the following libraries to build out my DApp:
+
+- `Truffle` - Used for its extensive abilities as a framework and also for testing
+- `Web3` - Used due to its excellent ability to connect to the EVM network
