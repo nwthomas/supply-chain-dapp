@@ -15,7 +15,7 @@ contract ConsumerRole {
   Roles.Role private consumers;
 
   // In the constructor make the address that deploys this contract the 1st consumer
-  constructor() public {
+  constructor () public {
     _addConsumer(msg.sender);
   }
 

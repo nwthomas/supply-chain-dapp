@@ -13,8 +13,8 @@ library Roles {
    * @dev give an account access to this role
    */
   function add(Role storage role, address account) internal {
-    require(account != address(0));
-    require(!has(role, account));
+    require(account != address(0), "You must be the owner of the contract.");
+    require(!has(role, account), "You must have this role.");
 
     role.bearer[account] = true;
   }
@@ -23,8 +23,8 @@ library Roles {
    * @dev remove an account's access to this role
    */
   function remove(Role storage role, address account) internal {
-    require(account != address(0));
-    require(has(role, account));
+    require(account != address(0), "You must be the owner of the contract.");
+    require(has(role, account), "You must have this role.");
 
     role.bearer[account] = false;
   }

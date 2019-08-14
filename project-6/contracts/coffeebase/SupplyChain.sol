@@ -156,7 +156,7 @@ contract SupplyChain {
   function harvestItem(uint _upc, address _originFarmerID, string _originFarmName, string _originFarmInformation, string _originFarmLatitude, string  _originFarmLongitude, string  _productNotes) public
   {
     // Add the new item as part of Harvest
-    items[_upc] = Item({ sku: sku, upc: _upc, ownerId: _originFarmerID, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productID: _upc + sku, productNotes: _productNotes, productPrice: 0, itemState: State.Harvested, distributorID: 0, retailerID: 0, consumerID: 0 });
+    items[_upc] = Item({ sku: sku, upc: _upc, ownerID: _originFarmerID, originFarmerID: _originFarmerID, originFarmName: _originFarmName, originFarmInformation: _originFarmInformation, originFarmLatitude: _originFarmLatitude, originFarmLongitude: _originFarmLongitude, productID: _upc + sku, productNotes: _productNotes, productPrice: 0, itemState: State.Harvested, distributorID: 0, retailerID: 0, consumerID: 0 });
 
     // Increment sku
     sku = sku + 1;
@@ -205,6 +205,7 @@ contract SupplyChain {
     {
     // Update the appropriate fields
     items[_upc].itemState = State.ForSale;
+    items[_upc].productPrice = _price;
 
     // Emit the appropriate event
     emit ForSale(_upc);
