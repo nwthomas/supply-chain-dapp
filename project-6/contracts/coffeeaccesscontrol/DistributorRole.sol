@@ -1,4 +1,4 @@
-pragma solidity ^0.5.10;
+pragma solidity ^0.5.8;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -12,7 +12,7 @@ contract DistributorRole {
   event removeDistributor(address _removedDistributor);
 
   // Define a struct 'distributors' by inheriting from 'Roles' library, struct Role
-  Roles private distributors;
+  Roles.Role private distributors;
 
   // In the constructor make the address that deploys this contract the 1st distributor
   constructor() public {

@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.8;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -21,13 +21,13 @@ contract FarmerRole {
 
   // Define a modifier that checks to see if msg.sender has the appropriate role
   modifier onlyFarmer() {
-    require(isFarmer(msg.sender));
+    require(isFarmer(msg.sender), "You must posses this role.");
     _;
   }
 
   // Define a function 'isFarmer' to check this role
-  function isFarmer(address account) public view returns (bool) {
-    return farmers.has(account);
+  function isFarmer(address _account) public view returns (bool) {
+    return farmers.has(_account);
   }
 
   // Define a function 'addFarmer' that adds this role

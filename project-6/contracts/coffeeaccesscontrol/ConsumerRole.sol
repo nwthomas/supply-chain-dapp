@@ -1,4 +1,4 @@
-pragma solidity ^0.5.10;
+pragma solidity ^0.5.8;
 
 // Import the library 'Roles'
 import "./Roles.sol";
@@ -8,11 +8,11 @@ contract ConsumerRole {
   using Roles for Roles.Role;
 
   // Define 2 events, one for Adding, and other for Removing
-  event addConsumer(address _newConsumer);
+  event newConsumer(address _newConsumer);
   event removeConsumer(address _removedConsumer);
 
   // Define a struct 'consumers' by inheriting from 'Roles' library, struct Role
-  Roles private consumers;
+  Roles.Role private consumers;
 
   // In the constructor make the address that deploys this contract the 1st consumer
   constructor() public {
@@ -31,8 +31,8 @@ contract ConsumerRole {
   }
 
   // Define a function 'addConsumer' that adds this role
-  function addConsumer(address account) public onlyConsumer {
-    consumers.add(msg.sender);
+  function addConsumer(address _account) public onlyConsumer {
+    consumers.add(_account);
   }
 
   // Define a function 'renounceConsumer' to renounce this role
@@ -43,7 +43,7 @@ contract ConsumerRole {
   // Define an internal function '_addConsumer' to add this role, called by 'addConsumer'
   function _addConsumer(address _account) internal {
     consumers.add(_account);
-    emit addConsumer(_account);
+    emit newConsumer(_account);
   }
 
   // Define an internal function '_removeConsumer' to remove this role, called by 'removeConsumer'
