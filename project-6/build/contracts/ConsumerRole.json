@@ -2611,10 +2611,16 @@
       "links": {},
       "address": "0xA65B87754E0A73860AA6B7eb6E95D79CD2d893d2",
       "transactionHash": "0x914e83975cce23e8bd1301c3f908b67b8f126c34b6f56ce09c0299d0ce7bd088"
+    },
+    "1565852684967": {
+      "events": {},
+      "links": {},
+      "address": "0x8CFdd3DE8cDFF1774a314aDE2F5908F4AEAa0c80",
+      "transactionHash": "0x3fbe70fc9552555aaef5fe804a990932c2fd4c9c7b8a5d75a001bb0c9ba50b5e"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-14T09:09:10.915Z",
+  "updatedAt": "2019-08-15T08:08:02.201Z",
   "devdoc": {
     "methods": {}
   },

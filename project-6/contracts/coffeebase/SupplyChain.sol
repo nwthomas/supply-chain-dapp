@@ -233,7 +233,7 @@ contract SupplyChain {
     items[_upc].originFarmerID.transfer(items[_upc].productPrice);
 
     // emit the appropriate event
-    emit Purchased(_upc);
+    emit Sold(_upc);
   }
 
   // Define a function 'shipItem' that allows the distributor to mark an item 'Shipped'
@@ -249,7 +249,7 @@ contract SupplyChain {
     items[_upc].itemState = State.Shipped;
 
     // Emit the appropriate event
-    emit Sold(_upc);
+    emit Shipped(_upc);
   }
 
   // Define a function 'receiveItem' that allows the retailer to mark an item 'Received'
