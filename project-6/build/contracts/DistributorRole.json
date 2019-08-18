@@ -285,7 +285,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1508,
+                          "referencedDeclaration": 1515,
                           "src": "637:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -393,7 +393,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1508,
+                              "referencedDeclaration": 1515,
                               "src": "793:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -481,10 +481,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1511,
-                        1512
+                        1518,
+                        1519
                       ],
-                      "referencedDeclaration": 1512,
+                      "referencedDeclaration": 1519,
                       "src": "771:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -843,7 +843,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1508,
+                          "referencedDeclaration": 1515,
                           "src": "1320:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1513,7 +1513,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1508,
+                          "referencedDeclaration": 1515,
                           "src": "637:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1621,7 +1621,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1508,
+                              "referencedDeclaration": 1515,
                               "src": "793:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1709,10 +1709,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        1511,
-                        1512
+                        1518,
+                        1519
                       ],
-                      "referencedDeclaration": 1512,
+                      "referencedDeclaration": 1519,
                       "src": "771:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2071,7 +2071,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1508,
+                          "referencedDeclaration": 1515,
                           "src": "1320:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2545,24 +2545,45 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x77005c6Ad7a03075f5eCE15c5913d845956D0c75",
-      "transactionHash": "0xf3086248e0a55cfeb3d83098c6b07dfb01be62165ef660c47e4f08189c266dd1"
+      "address": "0x73a1bf5bD0039044534780e44838b75C699EDE76",
+      "transactionHash": "0xaf4731dc5e7ea7aacaec04c7a9d1e50a6d854107ae27cd79b71cdcba34fd9e57"
     },
-    "1565773740046": {
-      "events": {},
+    "5777": {
+      "events": {
+        "0x832169357bd8f7b0d31f9a68022030847c1e47ac9c81de7d096234c539f57840": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_newDistributor",
+              "type": "address"
+            }
+          ],
+          "name": "newDistributor",
+          "type": "event",
+          "signature": "0x832169357bd8f7b0d31f9a68022030847c1e47ac9c81de7d096234c539f57840"
+        },
+        "0x57c1f9e2f4ee451e99d2054c79f36047ac914be890f0bfb77c40356b294e48f6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_removedDistributor",
+              "type": "address"
+            }
+          ],
+          "name": "removeDistributor",
+          "type": "event",
+          "signature": "0x57c1f9e2f4ee451e99d2054c79f36047ac914be890f0bfb77c40356b294e48f6"
+        }
+      },
       "links": {},
-      "address": "0xd22De155853B67cE1cA3693FBE52EE958f755E7b",
-      "transactionHash": "0xb85af27448a03d1e583161239d8e34aeb5196c9078312a074e3bed7b8e28dcf6"
-    },
-    "1565852684967": {
-      "events": {},
-      "links": {},
-      "address": "0x2Ebab09eCF7C3b79CEd4Ce565C8CcE066dcAd419",
-      "transactionHash": "0xed94330aa51b896b9c5f35746c7570e58783e853a4b7599f93a7e106db61b253"
+      "address": "0x6662Fd127A3802213110A621019A6748D18bcE04",
+      "transactionHash": "0xdb3cfbb27cef9f6d0c60a5d1fcbcd5f3eb186ee6beb68de5c8a580c0e66f894a"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-16T09:09:47.662Z",
+  "updatedAt": "2019-08-18T19:08:04.618Z",
   "devdoc": {
     "methods": {}
   },

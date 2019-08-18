@@ -42,7 +42,7 @@ module.exports = {
           "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY
         ),
       network_id: 4,
-      gas: 3000000,
+      gas: 4500000,
       gasPrice: 10000000000
     },
     main: {
