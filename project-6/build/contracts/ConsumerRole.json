@@ -2607,12 +2607,6 @@
   },
   "networks": {
     "4": {
-      "events": {},
-      "links": {},
-      "address": "0x08655dF1231e7d5fD6Bd11f18763c9ea07ba6496",
-      "transactionHash": "0xde09d2f53ff53d893220a61ba9e54f1555d32e1734e12f72f546484d1faf007d"
-    },
-    "5777": {
       "events": {
         "0xea7df4451d01b43f942a73b2599da34193b009e6319056bfc5a993af519025d4": {
           "anonymous": false,
@@ -2642,12 +2636,18 @@
         }
       },
       "links": {},
+      "address": "0x4416FF027f360D9899E9885369BdEfd3BadaDC36",
+      "transactionHash": "0xf6738e11465ea6db01cd36ca7d0e72cfa31e6bcb3a0fc5df5369a364c87acb7b"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
       "address": "0xA4b883210a8b3CC0B6adBc9fe752786F987DD8F2",
       "transactionHash": "0x2e480435478e7b0087041370ff8f78518fa480b6b777671cb32a1ccc5066837c"
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-18T19:08:04.633Z",
+  "updatedAt": "2019-08-18T20:10:24.412Z",
   "devdoc": {
     "methods": {}
   },
